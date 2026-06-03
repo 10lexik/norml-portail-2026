@@ -24,10 +24,11 @@ const initAnimation = () => {
   
   words.forEach(word => {
     const span = document.createElement('span')
-    span.innerText = word + ' '
+    span.innerText = word
     span.style.opacity = '0.1'
     span.style.display = 'inline-block'
     textRef.value?.appendChild(span)
+    textRef.value?.appendChild(document.createTextNode(' '))
   })
 
   gsap.to(textRef.value.children, {
