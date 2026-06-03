@@ -122,7 +122,6 @@ function useMultiTicker(initialRegion: keyof typeof REGIONS_DATA) {
 
 const { t } = useI18n()
 const {
-  currentRegion,
   deathCountRaw,
   chillCountRaw,
   taxRevenueRaw,

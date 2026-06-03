@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger)
 const { t, tm } = useI18n()
 
 // For FAQ accordion logic
-const faqOpen = ref<number | null>(null)
-const toggleFaq = (idx: number) => {
+const faqOpen = ref<number | string | null>(null)
+const toggleFaq = (idx: number | string) => {
   faqOpen.value = faqOpen.value === idx ? null : idx
 }
 
