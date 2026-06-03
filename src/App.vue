@@ -6,7 +6,7 @@ import StickyHeader from './components/StickyHeader.vue'
 <template>
   <CustomCursor />
   <StickyHeader />
-  <main class="w-full min-h-screen bg-poster-beige relative cursor-none md:cursor-auto">
+  <main class="w-full min-h-screen bg-poster-beige relative cursor-none md:cursor-auto overflow-x-hidden">
     <RouterView />
   </main>
 </template>

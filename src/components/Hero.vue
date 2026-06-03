@@ -26,18 +26,18 @@ onMounted(() => {
     <!-- Content -->
     <div class="text-center z-10 max-w-4xl">
       <h1 ref="headline"
-        class="text-5xl md:text-7xl lg:text-8xl font-black text-prohib-black mb-6 leading-tight uppercase">
+        class="text-[11vw] sm:text-5xl md:text-7xl lg:text-8xl font-black text-prohib-black mb-6 leading-tight uppercase">
         {{ $t('hero.title_part1') }} <br />
         <span class="text-gradient-norml">{{ $t('hero.title_part2') }}</span>
       </h1>
-      <p ref="subhead" class="text-xl md:text-2xl text-prohib-black/80 font-medium mb-12 max-w-2xl mx-auto">
+      <p ref="subhead" class="text-[4.5vw] sm:text-xl md:text-2xl text-prohib-black/80 font-medium mb-12 max-w-2xl mx-auto">
         {{ $t('hero.subtitle') }}
       </p>
       <div ref="cta">
         <a href="https://www.norml.fr/categorie-produit/adhesions-dons-souscriptions/"
           target="_blank"
-          class="inline-flex items-center justify-center gap-4 px-10 py-5 bg-prohib-black text-white text-xl font-bold font-main uppercase tracking-widest rounded-full hover:bg-white hover:text-prohib-black transition-all shadow-[0_10px_40px_rgba(20,20,20,0.4)] hover:shadow-[0_10px_50px_rgba(255,255,255,0.4)] hover:-translate-y-2 cursor-interaction">
-          {{ $t('final_cta.cta') }}
+          class="inline-flex items-center justify-center gap-4 px-[6vw] py-[3.5vw] sm:px-10 sm:py-5 bg-prohib-black text-white text-[4vw] sm:text-xl whitespace-nowrap font-bold font-main uppercase tracking-widest rounded-full hover:bg-white hover:text-prohib-black transition-all shadow-[0_10px_40px_rgba(20,20,20,0.4)] hover:shadow-[0_10px_50px_rgba(255,255,255,0.4)] hover:-translate-y-2 active:scale-95 active:shadow-inner cursor-interaction">
+          {{ $t('hero.cta') }}
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
             class="lucide lucide-arrow-right">

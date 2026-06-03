@@ -308,7 +308,7 @@ const uiPanels = computed(() => {
       <!-- RETURN BUTTON -->
       <div class="text-center mt-16">
         <router-link to="/"
-          class="inline-flex items-center gap-2 text-prohib-black font-bold uppercase tracking-widest hover:text-reg-green transition-colors">
+          class="inline-flex items-center gap-2 text-prohib-black font-bold uppercase tracking-widest hover:text-reg-green transition-all active:scale-95 active:text-reg-green">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m15 18-6-6 6-6" />
@@ -370,9 +370,10 @@ $font-mono: "Share Tech Mono", monospace;
   font-family: $font-main;
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+  width: 100%;
   /* Petit grain pour effet papier */
   background-image: radial-gradient(#d0d6c0 1px, transparent 1px);
   background-size: 20px 20px;
@@ -387,6 +388,7 @@ $font-mono: "Share Tech Mono", monospace;
 .counter-module {
   width: 100%;
   max-width: 1024px;
+  margin: 0 auto;
   background: transparent;
   border-radius: 0;
   box-shadow: none;
@@ -467,9 +469,13 @@ $font-mono: "Share Tech Mono", monospace;
       padding-right: 5px;
     }
 
-    /* On cache sur mobile car ça prend trop de place */
+    /* Sur mobile, on le centre sur la ligne de démarcation et on le réduit légèrement */
     @media (max-width: 600px) {
-      display: none;
+      display: flex;
+      left: 50%;
+      top: 50%;
+      width: 70px;
+      transform: translate(-50%, -50%) rotate(-5deg);
     }
   }
 }
@@ -512,6 +518,11 @@ $font-mono: "Share Tech Mono", monospace;
     @include digital-font;
     font-size: 5rem;
     padding: 2.5rem 0;
+    
+    @media (max-width: 600px) {
+      font-size: 3.5rem;
+      padding: 1.5rem 0;
+    }
 
     .icon {
       position: absolute;
@@ -534,7 +545,7 @@ $font-mono: "Share Tech Mono", monospace;
     color: var(--text-on-dark);
 
     @media (max-width: 600px) {
-      margin-bottom: 10px;
+      margin-bottom: 0;
     }
 
     h2 {
@@ -642,7 +653,7 @@ $font-mono: "Share Tech Mono", monospace;
     white-space: nowrap;
 
     @media (max-width: 600px) {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 

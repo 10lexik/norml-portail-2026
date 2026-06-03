@@ -63,6 +63,50 @@ onMounted(() => {
   gsap.to('.globe-ping', { scale: 1.5, opacity: 0.8, duration: 1.5, repeat: -1, yoyo: true, ease: "sine.inOut" })
   
   gsap.to('.pulse-fast', { scale: 1.1, duration: 0.8, repeat: -1, yoyo: true, ease: "sine.inOut" })
+
+  // Mobile scrub animations
+  const mm = gsap.matchMedia()
+  mm.add("(max-width: 768px)", () => {
+    const cards = gsap.utils.toArray('.project-card') as HTMLElement[]
+    cards.forEach((card, idx) => {
+      const projectId = projects[idx].id
+      
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 85%',
+          end: 'center 50%',
+          scrub: 1
+        }
+      })
+      
+      // Generic card hover FX
+      tl.to(card, { scale: 1.02, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }, 0)
+      tl.to(card.querySelector('.absolute.inset-0.bg-gradient-to-br'), { opacity: 1 }, 0)
+      tl.to(card.querySelector('svg.ml-2'), { x: 8 }, 0)
+      
+      if (projectId === 'norml-trvknn') {
+        tl.to(card.querySelector('.card-1'), { x: -35, rotateZ: -15 }, 0)
+          .to(card.querySelector('.card-3'), { x: 35, rotateZ: 15 }, 0)
+          .to(card.querySelector('.question-mark'), { opacity: 0, scale: 0.5 }, 0)
+          .to(card.querySelector('.check-mark'), { opacity: 1, scale: 1 }, 0)
+      } else if (projectId === 'norml-globe') {
+        tl.to(card.querySelector('.globe-ping'), { boxShadow: '0 0 30px 10px #4caf50' }, 0)
+          .to(card.querySelector('.globe-container'), { scale: 1.15 }, 0)
+      } else if (projectId === 'norml-urgence') {
+        tl.to(card.querySelector('.urgence-1'), { scale: 1.1 }, 0)
+          .to(card.querySelector('.urgence-2'), { scale: 1.3, opacity: 0.5 }, 0)
+          .to(card.querySelector('.urgence-3'), { scale: 1.5, opacity: 0.2 }, 0)
+      } else if (projectId === 'norml-ticket') {
+        tl.to(card.querySelector('.ticket-1'), { y: 25, rotateZ: 5 }, 0)
+          .to(card.querySelector('.ticket-3'), { y: -25, rotateZ: -5 }, 0)
+      } else if (projectId === 'norml-bilan') {
+        tl.to(card.querySelector('.bilan-1'), { y: -20, scale: 1.05 }, 0)
+          .to(card.querySelector('.bilan-3'), { y: 20, scale: 0.95 }, 0)
+          .to(card.querySelector('.bilan-counter'), { scale: 1.15, textShadow: '0 0 15px #8bc34a' }, 0)
+      }
+    })
+  })
 })
 
 const handleMouseMove = (e: MouseEvent, idx: number) => {
@@ -129,7 +173,7 @@ const handleMouseLeave = (e: MouseEvent, idx: number) => {
 <template>
   <section ref="sectionRef" class="py-32 px-6 md:px-12 bg-prohib-black text-white relative rounded-t-[3rem] -mt-10 z-20 shadow-2xl">
     <div class="max-w-6xl mx-auto">
-      <h2 ref="titleRef" class="text-4xl md:text-5xl font-black mb-16 text-center tracking-wide uppercase">
+      <h2 ref="titleRef" class="text-[9vw] sm:text-4xl md:text-5xl font-black mb-16 text-center tracking-wide uppercase">
         {{ $t('projects.title_part1') }} <span class="text-gradient-norml">{{ $t('projects.title_part2') }}</span>
       </h2>
       
@@ -142,13 +186,15 @@ const handleMouseLeave = (e: MouseEvent, idx: number) => {
           :target="p.url ? '_blank' : undefined"
           @mousemove="(e: MouseEvent) => handleMouseMove(e, i)"
           @mouseleave="(e: MouseEvent) => handleMouseLeave(e, i)"
+          @touchstart="(e: TouchEvent) => handleMouseMove(e as any, i)"
+          @touchend="(e: TouchEvent) => handleMouseLeave(e as any, i)"
           class="project-card block group relative p-[2px] bg-gradient-to-br from-white/20 to-white/5 rounded-3xl cursor-pointer"
           style="perspective: 1000px;"
         >
-          <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none"></div>
+          <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-20 md:opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity rounded-3xl pointer-events-none"></div>
           
           <div class="bg-prohib-black h-full rounded-[22px] p-8 relative overflow-hidden flex flex-col pointer-events-none">
-            <div class="absolute -right-12 -top-12 w-64 h-64 rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-500" :style="{ backgroundColor: p.color }"></div>
+            <div class="absolute -right-12 -top-12 w-64 h-64 rounded-full blur-[80px] opacity-30 md:opacity-20 group-hover:opacity-40 group-active:opacity-40 transition-opacity duration-500" :style="{ backgroundColor: p.color }"></div>
             
             <div class="relative h-40 w-full mb-8 flex items-center justify-center">
               
@@ -208,12 +254,16 @@ const handleMouseLeave = (e: MouseEvent, idx: number) => {
 
             </div>
             
-            <h3 class="text-2xl font-bold mb-3 font-main tracking-tight uppercase mt-auto" :style="{ color: p.color }">{{ $t(`projects.items.${p.key}.title`) }}</h3>
-            <p class="text-gray-400 text-sm mb-6 font-body leading-relaxed flex-1">{{ $t(`projects.items.${p.key}.desc`) }}</p>
+            <h3 class="text-[6.5vw] sm:text-2xl font-black mb-2 uppercase tracking-tight" :style="{ color: p.color }">
+              {{ $t(`projects.items.${p.key}.title`) }}
+            </h3>
+            <p class="text-[4vw] sm:text-sm text-gray-400 leading-relaxed min-h-[3rem] mb-6 font-body">
+              {{ $t(`projects.items.${p.key}.desc`) }}
+            </p>
             
-            <div class="flex items-center text-sm font-bold tracking-wider uppercase transition-colors" :style="{ color: p.color }">
+            <div class="mt-auto flex items-center text-[3.5vw] sm:text-sm font-bold tracking-wider uppercase transition-colors whitespace-nowrap" :style="{ color: p.color }">
               {{ $t('projects.discover') }}
-              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-5 h-5 group-hover:translate-x-2 group-active:translate-x-2 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
           </div>
         </component>
