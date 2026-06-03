@@ -21,6 +21,18 @@
       "globe": {
         "title": "NORML Globe",
         "desc": "Interactive 3D visualization of worldwide legislations."
+      },
+      "urgence": {
+        "title": "AFD Emergency",
+        "desc": "Legal survival guide against the explosion of repression."
+      },
+      "ticket": {
+        "title": "The Salty Receipt",
+        "desc": "The true cost of prohibition for the French taxpayer."
+      },
+      "bilan": {
+        "title": "Live Assessment",
+        "desc": "Real-time counter of a public policy failure."
       }
     }
   },
@@ -32,5 +44,131 @@
     "title_part2": "They have the budgets.",
     "subtitle": "Support the original creators. With your membership, let's regain the advantage for public health and free information.",
     "cta": "Join NORML France"
+  },
+  "urgencePage": {
+    "badge": "2025 SSMSI REPORT EMERGENCY",
+    "heroTitle": "290,000 Fines this year.",
+    "heroSubtitle": "Don't stand alone against the State.",
+    "heroDesc": "The Ministry of the Interior's report is out: repression is exploding. <br>NORML France opens this support unit to defend you.",
+    "didYouKnowText": "<strong>Did you know?</strong> The SSMSI report published this December 2025 reveals that 290,000 people received a Criminal Fixed Penalty (AFD) this year. It's a historical record. Faced with this industrialized sanctioning, we have decided to make our legal tools available to everyone, for free.",
+    "introText": "You just received this green paper: a <strong>€200 Criminal Fixed Penalty (AFD)</strong>. The State relies on your silence and isolation to validate its statistics.",
+    "alertTitle": "Warning before paying",
+    "alertText": "Paying the fine is an admission of the offense. It automatically leads to:",
+    "alertPoints": [
+      "<strong>Registration in the Criminal Record (Bulletin n°2)</strong>.",
+      "Setting a precedent for <strong>legal recidivism</strong>.",
+      "Funding a policy we are fighting against."
+    ],
+    "solutionTitle": "The Solution: Our Emergency Guide",
+    "solutionDesc": "At NORML France, we have mobilized our legal experts to create the document the State will never give you.",
+    "kitTitle": "2025 AFD<br>SURVIVAL KIT",
+    "kitSubtitle": "Special SSMSI Report",
+    "kitContentTitle": "Download the \"Understand & Contest\" Kit",
+    "kitContentDesc": "This guide, updated following the latest ministry data, contains:",
+    "kitPoints": [
+      "How to avoid registration in the B2 Criminal Record",
+      "Exact deadlines for contesting",
+      "Standard letter template drafted by lawyers",
+      "Your recourses in case of a positive saliva test"
+    ],
+    "formPlaceholder": "Your primary email...",
+    "formBtn": "GET THE FREE KIT",
+    "formDisclaimer": "100% Confidential. We are activists, not merchants.",
+    "expertsTitle": "An expert team by your side",
+    "expertsDesc": "NORML France relies on the expertise of renowned criminal lawyers who secure decisive victories against the administration.",
+    "experts": [
+      {
+        "name": "Me Nicolas Hachet",
+        "role": "Bordeaux Bar Association",
+        "bio": "Specialist in traffic and narcotics law. He just won a <strong>major appeal victory</strong> a few weeks ago, setting a favorable precedent for users.",
+        "img": "https://www.echos-judiciaires.com/wp-content/uploads/2020/07/N.HACHET-760x396-c-default.jpg"
+      },
+      {
+        "name": "Me Emilie Boyer",
+        "role": "Carcassonne Bar Association",
+        "bio": "A long-time activist, she defends users daily against procedural abuses and advocates for a fair application of the law.",
+        "img": "https://www.pagesjaunes.fr/media/newdam/70/84/66/00/00/ca/82/4c/3b/e2/61f27084660000ca824c3be2/61f27084660000ca824c3be3.jpg"
+      },
+      {
+        "name": "Me Xavier Pizarro",
+        "role": "Marseille Bar Association",
+        "bio": "The illustrious lawyer from the Kanavape case before the EU Court of Justice. A leading figure at the bar, he relentlessly fights prohibition at the highest level.",
+        "img": "https://images.squarespace-cdn.com/content/v1/64beeb036ecdf30ebd09f63b/5810fe05-b42d-4d52-972e-ef94c4788803/00003+-+Me+Xavier+PIZARRO+-+Pizarro+Avocats+-+Marseille.jpg?format=1000w"
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions (FAQ)",
+    "faqs": [
+      {
+        "q": "Does the €200 fixed penalty appear on my criminal record?",
+        "a": "<strong>YES.</strong> That is the main trap. Paying the Criminal Fixed Penalty (AFD) equates to an admission of guilt. The offense is then recorded in <strong>Bulletin N°2 of the Criminal Record</strong>. <br><br>This can prevent you from accessing certain jobs (civil service, transport, security, airports, childcare) and complicate administrative procedures. Our guide explains how to request non-registration."
+      },
+      {
+        "q": "What is the deadline to pay or contest the fine?",
+        "a": "Watch the dates! You have:<br>- <strong>15 days</strong> to pay the reduced amount (€150).<br>- <strong>30 days</strong> if you pay online/by phone.<br>- <strong>45 days</strong> to pay the standard amount (€200) or to <strong>contest</strong>.<br><br>After this deadline, the fine increases to €450. Don't let the envelope sit around."
+      },
+      {
+        "q": "How do I contest a fine for drug use?",
+        "a": "Contesting must be done via the ANTAI website or by registered mail. But beware: you cannot contest just \"because you disagree\". <br><br>You must raise valid legal arguments (procedural flaws, irregular checks, failure to notify rights). This is why our lawyers (Me Hachet, Me Pizarro) drafted the letter templates included in our Survival Kit."
+      },
+      {
+        "q": "Must I pay the fine before contesting (Deposit/Consignation)?",
+        "a": "This is often required. To contest, the State usually demands a \"deposit\" (consignation) of €150 or €200. This amount is not cashed as a payment; it is blocked during the procedure. <br><br>If you win (or if the public prosecutor drops the case), this money is refunded to you. If you simply pay the fine directly without specifying it's a deposit, the case is closed and you are guilty."
+      }
+    ],
+    "joinTitle": "Stop being a statistic",
+    "joinDesc": "The State took €200 from you. Don't give them your silence too.<br>Join the only organization fighting to make this fine the last one.",
+    "joinBtn": "TURN MY FINE INTO A MEMBERSHIP →",
+    "joinSub": "Membership starts at €10 / year"
+  },
+  "ticketPage": {
+    "republique": "FRENCH<br>REPUBLIC",
+    "subtitle": "Annual Accounting of Prohibition",
+    "costTitle": "ANNUAL COST OF REPRESSION",
+    "costVal": "- €1.80 Bn",
+    "costDesc": "Police, Justice, Customs",
+    "costBase": "Base: 100%",
+    "revenueTitle": "MAX ACTUAL REVENUES",
+    "revenueVal": "+ €102.2 M",
+    "revenueDesc": "Fines + Criminal Assets",
+    "revenueBase": "Rate: 5.68%",
+    "totalTitle": "TOTAL TO PAY<br><small class=\"text-xs font-medium\">(Deficit for the taxpayer)</small>",
+    "totalVal": "- €1.69 Bn",
+    "totalBase": "Burden: 94.32%",
+    "potentialTitle": "🟢 Economic Potential<br>of Legalization",
+    "potentialVal": "+ €2.80 Bn",
+    "potentialDesc": "Taxes & Savings (CAE Source)",
+    "date": "12/12/2025 - 14:32 - TERMINAL 0420",
+    "merci": "THANK YOU FOR YOUR VISIT"
+  },
+  "bilanLive": {
+    "header": {
+      "title": "Prohibition Balance",
+      "subtitle": "The human and financial cost of a failed policy."
+    },
+    "left": {
+      "title": "Regulation",
+      "subtitle": "Health & Economy",
+      "metricLabel": "DEATHS BY OVERDOSE",
+      "metricNote": "Non-lethal substance (Source: WHO)",
+      "financeTitle": "Potential Tax Revenue",
+      "financeNote": "Money for hospitals, schools...",
+      "timerTitle": "Arrest for use in:"
+    },
+    "right": {
+      "title": "Prohibition",
+      "subtitle": "Violence & Waste",
+      "metricLabel": "TRAFFIC-RELATED DEATHS",
+      "metricNote": "Settling scores & Violence",
+      "financeTitle": "Direct Cost of Repression",
+      "financeNote": "Police, Justice, Prison (Burned money)",
+      "timerTitle": "Next estimated victim in:"
+    },
+    "disclaimer": {
+      "title": "Sources & Methodology",
+      "repression": "The <strong>repression figures (€1.1bn)</strong> are from the Kopp report (OFDT) and MILDECA.",
+      "taxes": "The <strong>potential tax revenues (€2.5bn)</strong> come from the Council of Economic Analysis (CAE) 2019 report.",
+      "deaths": "The <strong>traffic-related deaths</strong> include only homicides linked to narco-banditry (approx. 120/year according to the Ministry of Interior).",
+      "arrests": "The <strong>arrests (175,000/year)</strong> correspond to arrests for simple drug use in France."
+    }
   }
 }

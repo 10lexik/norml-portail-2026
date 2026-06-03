@@ -4,10 +4,10 @@
     "cta": "Soutenir notre action"
   },
   "hero": {
-    "title_part1": "Les outils numériques de",
-    "title_part2": "NORML France",
+    "title_part1": "Un collectif toujours à l'assaut",
+    "title_part2": "du numérique",
     "subtitle": "Découvrez nos projets interactifs conçus pour informer, sensibiliser et mobiliser.",
-    "cta": "Devenir Membre"
+    "cta": "Devenir Adhérent"
   },
   "projects": {
     "title_part1": "Nos Projets",
@@ -20,17 +20,155 @@
       },
       "globe": {
         "title": "NORML Globe",
-        "desc": "Visualisation 3D interactive des législations mondiales."
+        "desc": "Notre visualisation 3D interactive des législations mondiales."
+      },
+      "urgence": {
+        "title": "Urgence AFD",
+        "desc": "Le guide de survie juridique face à l'explosion de la répression."
+      },
+      "ticket": {
+        "title": "Le Ticket Salé",
+        "desc": "Le vrai coût de la prohibition pour le contribuable français."
+      },
+      "bilan": {
+        "title": "Bilan Prohibo",
+        "desc": "Un compteur en temps réel de l'échec d'une politique publique."
       }
     }
   },
   "mission": {
-    "text": "Depuis des années, NORML France innove et crée les outils originaux d'information. L'information de santé publique n'est pas un business. Aidez-nous à garder un temps d'avance."
+    "text": "Portés par l'engagement de nos bénévoles, nous concevons des outils numériques innovants pour rendre notre plaidoyer accessible à tous. Parce que l'information de santé publique ne devrait jamais être un business, soutenez une démarche 100% citoyenne et indépendante."
   },
   "final_cta": {
     "title_part1": "Nous avons l'expertise.",
     "title_part2": "Ils ont les budgets.",
     "subtitle": "Soutenez les créateurs originaux. Avec votre adhésion, reprenons l'avantage pour la santé publique et une information libre.",
     "cta": "Rejoindre NORML France"
+  },
+  "urgencePage": {
+    "badge": "URGENCE RAPPORT SSMSI 2025",
+    "heroTitle": "290 000 Amendes cette année.",
+    "heroSubtitle": "Ne restez pas seul face à l'État.",
+    "heroDesc": "Le rapport du Ministère de l'Intérieur est tombé : la répression explose. <br>NORML France ouvre cette cellule d'aide pour vous défendre.",
+    "didYouKnowText": "<strong>Le saviez-vous ?</strong> Le rapport SSMSI publié en ce mois de décembre 2025 révèle que 290 000 personnes ont reçu une Amende Forfaitaire Délictuelle (AFD) cette année. C'est un record historique. Face à cette industrialisation de la sanction, nous avons décidé de rendre nos outils juridiques accessibles à tous, gratuitement.",
+    "introText": "Vous venez de recevoir ce papier vert : une <strong>Amende Forfaitaire Délictuelle (AFD) de 200 €</strong>. L'État compte sur votre silence et votre isolement pour valider ses statistiques.",
+    "alertTitle": "Attention avant de payer",
+    "alertText": "Le paiement de l'amende vaut reconnaissance de l'infraction. Cela entraîne automatiquement :",
+    "alertPoints": [
+      "<strong>L'inscription au Casier Judiciaire (Bulletin n°2)</strong>.",
+      "La constitution d'un précédent pour <strong>récidive légale</strong>.",
+      "Le financement d'une politique que nous combattons."
+    ],
+    "solutionTitle": "La Solution : Notre Guide d'Urgence",
+    "solutionDesc": "Chez NORML France, nous avons mobilisé nos juristes pour créer le document que l'État ne vous donnera jamais.",
+    "kitTitle": "KIT DE SURVIE<br>AFD 2025",
+    "kitSubtitle": "Spécial Rapport SSMSI",
+    "kitContentTitle": "Téléchargez le Kit \"Comprendre & Contester\"",
+    "kitContentDesc": "Ce guide mis à jour suite aux dernières données du ministère contient :",
+    "kitPoints": [
+      "Comment éviter l'inscription au Casier Judiciaire B2",
+      "Les délais exacts pour contester",
+      "Modèle de lettre type rédigé par des avocats",
+      "Vos recours en cas de test salivaire positif"
+    ],
+    "formPlaceholder": "Votre email principal...",
+    "formBtn": "RECEVOIR LE KIT GRATUIT",
+    "formDisclaimer": "100% Confidentiel. Nous sommes militants, pas commerçants.",
+    "expertsTitle": "Une équipe experte à vos côtés",
+    "expertsDesc": "NORML France s'appuie sur l'expertise d'avocats pénalistes reconnus qui remportent des victoires décisives contre l'administration.",
+    "experts": [
+      {
+        "name": "Me Nicolas Hachet",
+        "role": "Barreau de Bordeaux",
+        "bio": "Spécialiste du droit routier et des stupéfiants. Il vient de remporter une <strong>victoire majeure en appel</strong> il y a quelques semaines, créant une jurisprudence favorable aux usagers.",
+        "img": "https://www.echos-judiciaires.com/wp-content/uploads/2020/07/N.HACHET-760x396-c-default.jpg"
+      },
+      {
+        "name": "Me Emilie Boyer",
+        "role": "Barreau de Carcassonne",
+        "bio": "Engagée de longue date, elle défend quotidiennement les usagers contre les abus de procédure et milite pour une application juste de la loi.",
+        "img": "https://www.pagesjaunes.fr/media/newdam/70/84/66/00/00/ca/82/4c/3b/e2/61f27084660000ca824c3be2/61f27084660000ca824c3be3.jpg"
+      },
+      {
+        "name": "Me Xavier Pizarro",
+        "role": "Barreau de Marseille",
+        "bio": "L'illustre avocat de l'affaire Kanavape devant la Cour de Justice de l'UE. Ténor du barreau, il combat sans relâche la prohibition au plus haut niveau.",
+        "img": "https://images.squarespace-cdn.com/content/v1/64beeb036ecdf30ebd09f63b/5810fe05-b42d-4d52-972e-ef94c4788803/00003+-+Me+Xavier+PIZARRO+-+Pizarro+Avocats+-+Marseille.jpg?format=1000w"
+      }
+    ],
+    "faqTitle": "Questions Fréquentes (FAQ)",
+    "faqs": [
+      {
+        "q": "L'amende forfaitaire de 200€ apparaît-elle sur mon casier judiciaire ?",
+        "a": "<strong>OUI.</strong> C'est le piège principal. Le paiement de l'Amende Forfaitaire Délictuelle (AFD) vaut reconnaissance de culpabilité. L'infraction est alors inscrite au <strong>Bulletin N°2 du Casier Judiciaire</strong>. <br><br>Cela peut vous bloquer l'accès à certains emplois (fonction publique, transports, sécurité, aéroports, petite enfance) et compliquer vos démarches administratives. Notre guide explique comment demander la non-inscription."
+      },
+      {
+        "q": "Quel est le délai pour payer ou contester l'amende ?",
+        "a": "Attention aux dates ! Vous avez :<br>- <strong>15 jours</strong> pour payer le montant minoré (150€).<br>- <strong>30 jours</strong> si vous payez par télépaiement (internet/téléphone).<br>- <strong>45 jours</strong> pour payer le montant normal (200€) ou pour <strong>contester</strong>.<br><br>Passé ce délai, l'amende est majorée à 450€. Ne laissez pas traîner l'enveloppe."
+      },
+      {
+        "q": "Comment contester une amende pour usage de stupéfiants ?",
+        "a": "La contestation se fait obligatoirement via le site de l'ANTAI ou par courrier recommandé. Mais attention : vous ne pouvez pas contester juste \"parce que vous n'êtes pas d'accord\". <br><br>Vous devez soulever des arguments juridiques (vice de procédure, irrégularité du contrôle, absence de notification des droits). C'est pour cela que nos avocats (Me Hachet, Me Pizarro) ont rédigé les modèles de lettres inclus dans notre Kit de Survie."
+      },
+      {
+        "q": "Dois-je payer l'amende avant de contester (Consignation) ?",
+        "a": "C'est souvent exigé. Pour contester, l'État demande généralement une \"consignation\" de 150€ ou 200€. Cette somme n'est pas encaissée comme un paiement, elle est bloquée le temps de la procédure. <br><br>Si vous gagnez (ou si l'officier du ministère public classe l'affaire), cette somme vous est remboursée. Si vous payez l'amende directement sans préciser que c'est une consignation, l'affaire est close et vous êtes coupable."
+      }
+    ],
+    "joinTitle": "Ne soyez plus une statistique",
+    "joinDesc": "L'État vous a pris 200 €. Ne lui donnez pas en plus votre silence.<br>Rejoignez la seule organisation qui se bat pour que cette amende soit la dernière.",
+    "joinBtn": "TRANSFORMER MON AMENDE EN ADHÉSION →",
+    "joinSub": "Adhésion à partir de 10€ / an"
+  },
+  "ticketPage": {
+    "republique": "RÉPUBLIQUE<br>FRANÇAISE",
+    "subtitle": "Bilan comptable annuel de la prohibition",
+    "costTitle": "COÛT ANNUEL RÉPRESSION",
+    "costVal": "- 1.80 Mrd €",
+    "costDesc": "Police, Justice, Douanes",
+    "costBase": "Base: 100%",
+    "revenueTitle": "RECETTES RÉELLES MAX",
+    "revenueVal": "+ 102.2 M €",
+    "revenueDesc": "AFD + Avoirs Criminels",
+    "revenueBase": "Tx: 5,68%",
+    "totalTitle": "TOTAL À PAYER<br><small class=\"text-xs font-medium\">(Déficit pour le contribuable)</small>",
+    "totalVal": "- 1.69 Mrd €",
+    "totalBase": "Charge: 94,32%",
+    "potentialTitle": "🟢 Potentiel économique<br>d'une légalisation",
+    "potentialVal": "+ 2.80 Mrd €",
+    "potentialDesc": "Taxes & Économies (Source CAE)",
+    "date": "12/12/2025 - 14:32 - TERMINAL 0420",
+    "merci": "MERCI DE VOTRE VISITE"
+  },
+  "bilanLive": {
+    "header": {
+      "title": "Bilan de la Prohibition",
+      "subtitle": "Le coût humain et financier d'une politique en échec."
+    },
+    "left": {
+      "title": "Régulation",
+      "subtitle": "Santé & Économie",
+      "metricLabel": "MORTS PAR OVERDOSE",
+      "metricNote": "Substance non létale (Source : OMS)",
+      "financeTitle": "Recettes Fiscales Potentielles",
+      "financeNote": "Argent pour les hôpitaux, l'école...",
+      "timerTitle": "Arrestation pour usage dans :"
+    },
+    "right": {
+      "title": "Prohibition",
+      "subtitle": "Violence & Gaspillage",
+      "metricLabel": "MORTS LIÉS AU TRAFIC",
+      "metricNote": "Règlements de comptes & Violence",
+      "financeTitle": "Coût direct de la Répression",
+      "financeNote": "Police, Justice, Prison (Argent brûlé)",
+      "timerTitle": "Prochaine victime estimée dans :"
+    },
+    "disclaimer": {
+      "title": "Sources & Méthodologie",
+      "repression": "Les <strong>chiffres de la répression (1,1 Mrd €)</strong> sont issus du rapport Kopp (OFDT) et de la MILDECA.",
+      "taxes": "Les <strong>recettes fiscales potentielles (2,5 Mrd €)</strong> proviennent du rapport du Conseil d'Analyse Économique (CAE) de 2019.",
+      "deaths": "Les <strong>morts liés au trafic</strong> incluent uniquement les homicides liés au narco-banditisme (environ 120/an selon le Min. de l'Intérieur).",
+      "arrests": "Les <strong>arrestations (175 000/an)</strong> correspondent aux interpellations pour usage simple de stupéfiants en France."
+    }
   }
 }

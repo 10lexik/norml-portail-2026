@@ -11,7 +11,7 @@ let isVisible = false
 const handleScroll = () => {
   if (!headerRef.value) return
   const scrollY = window.scrollY
-  
+
   if (scrollY > 600 && !isVisible) {
     isVisible = true
     gsap.to(headerRef.value, { y: 0, duration: 0.5, ease: "power3.out" })
@@ -38,38 +38,29 @@ const switchLocale = (lang: string) => {
 </script>
 
 <template>
-  <header 
-    ref="headerRef" 
-    class="fixed top-0 left-0 w-full bg-poster-beige/90 backdrop-blur-md border-b border-prohib-black/10 z-50 px-6 py-4 flex justify-between items-center shadow-sm"
-  >
+  <header ref="headerRef"
+    class="fixed top-0 left-0 w-full bg-poster-beige/90 backdrop-blur-md border-b border-prohib-black/10 z-50 px-6 py-4 flex justify-between items-center shadow-sm">
     <div class="flex items-center gap-4">
       <img src="../assets/img/logo-norml.svg" alt="NORML France" class="h-8 md:h-10 drop-shadow-sm" />
       <span class="font-bold font-main text-xl text-prohib-black tracking-wide uppercase hidden lg:block mt-1">
         {{ $t('header.title') }}
       </span>
     </div>
-    
+
     <div class="flex items-center gap-4">
       <!-- Language Switcher -->
       <div class="flex items-center gap-2 text-sm font-bold font-main text-prohib-black/70 cursor-interaction">
-        <button 
-          @click="switchLocale('fr')" 
-          :class="{'text-reg-green border-b-2 border-reg-green': locale === 'fr', 'hover:text-prohib-black': locale !== 'fr'}"
-          class="transition-colors pb-1"
-        >FR</button>
+        <button @click="switchLocale('fr')"
+          :class="{ 'text-reg-green border-b-2 border-reg-green': locale === 'fr', 'hover:text-prohib-black': locale !== 'fr' }"
+          class="transition-colors pb-1">FR</button>
         <span class="opacity-50">|</span>
-        <button 
-          @click="switchLocale('en')" 
-          :class="{'text-reg-green border-b-2 border-reg-green': locale === 'en', 'hover:text-prohib-black': locale !== 'en'}"
-          class="transition-colors pb-1"
-        >EN</button>
+        <button @click="switchLocale('en')"
+          :class="{ 'text-reg-green border-b-2 border-reg-green': locale === 'en', 'hover:text-prohib-black': locale !== 'en' }"
+          class="transition-colors pb-1">EN</button>
       </div>
 
-      <a 
-        href="https://www.helloasso.com/associations/norml-france/adhesions/adhesion-2024-a-norml-france" 
-        target="_blank" 
-        class="inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-prohib-black text-white font-bold font-main uppercase tracking-widest rounded-full hover:bg-reg-green transition-colors shadow-lg text-xs md:text-sm cursor-interaction"
-      >
+      <a href="https://www.norml.fr/categorie-produit/adhesions-dons-souscriptions/" target="_blank"
+        class="inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-prohib-black text-white font-bold font-main uppercase tracking-widest rounded-full hover:bg-reg-green transition-colors shadow-lg text-xs md:text-sm cursor-interaction">
         {{ $t('header.cta') }}
       </a>
     </div>
