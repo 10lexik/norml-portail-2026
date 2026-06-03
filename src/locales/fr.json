@@ -1,0 +1,36 @@
+{
+  "header": {
+    "title": "Les Outils Numériques",
+    "cta": "Soutenir notre action"
+  },
+  "hero": {
+    "title_part1": "Les outils numériques de",
+    "title_part2": "NORML France",
+    "subtitle": "Découvrez nos projets interactifs conçus pour informer, sensibiliser et mobiliser.",
+    "cta": "Devenir Membre"
+  },
+  "projects": {
+    "title_part1": "Nos Projets",
+    "title_part2": "Phares",
+    "discover": "Découvrir le projet",
+    "items": {
+      "trivia": {
+        "title": "Trivia Kanna",
+        "desc": "Un jeu interactif pour tester et améliorer vos connaissances sur le cannabis."
+      },
+      "globe": {
+        "title": "NORML Globe",
+        "desc": "Visualisation 3D interactive des législations mondiales."
+      }
+    }
+  },
+  "mission": {
+    "text": "Depuis des années, NORML France innove et crée les outils originaux d'information. L'information de santé publique n'est pas un business. Aidez-nous à garder un temps d'avance."
+  },
+  "final_cta": {
+    "title_part1": "Nous avons l'expertise.",
+    "title_part2": "Ils ont les budgets.",
+    "subtitle": "Soutenez les créateurs originaux. Avec votre adhésion, reprenons l'avantage pour la santé publique et une information libre.",
+    "cta": "Rejoindre NORML France"
+  }
+}

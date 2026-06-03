@@ -1,0 +1,36 @@
+{
+  "header": {
+    "title": "Digital Tools",
+    "cta": "Support us"
+  },
+  "hero": {
+    "title_part1": "The digital tools of",
+    "title_part2": "NORML France",
+    "subtitle": "Discover our interactive projects designed to inform, raise awareness, and mobilize.",
+    "cta": "Become a Member"
+  },
+  "projects": {
+    "title_part1": "Our Flagship",
+    "title_part2": "Projects",
+    "discover": "Discover project",
+    "items": {
+      "trivia": {
+        "title": "Trivia Kanna",
+        "desc": "An interactive game to test and improve your knowledge about cannabis."
+      },
+      "globe": {
+        "title": "NORML Globe",
+        "desc": "Interactive 3D visualization of worldwide legislations."
+      }
+    }
+  },
+  "mission": {
+    "text": "For years, NORML France has been innovating and creating original informational tools. Public health information is not a business. Help us stay one step ahead."
+  },
+  "final_cta": {
+    "title_part1": "We have the expertise.",
+    "title_part2": "They have the budgets.",
+    "subtitle": "Support the original creators. With your membership, let's regain the advantage for public health and free information.",
+    "cta": "Join NORML France"
+  }
+}

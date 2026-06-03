@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
 
 const headerRef = ref<HTMLElement | null>(null)
 let isVisible = false
@@ -28,6 +31,10 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
+const switchLocale = (lang: string) => {
+  locale.value = lang as any
+}
 </script>
 
 <template>
@@ -36,18 +43,35 @@ onUnmounted(() => {
     class="fixed top-0 left-0 w-full bg-poster-beige/90 backdrop-blur-md border-b border-prohib-black/10 z-50 px-6 py-4 flex justify-between items-center shadow-sm"
   >
     <div class="flex items-center gap-4">
-      <img src="../assets/img/logo.svg" alt="NORML France" class="h-10 drop-shadow-sm" />
-      <span class="font-bold font-main text-xl text-prohib-black tracking-wide uppercase hidden md:block mt-1">
-        Les Outils Numériques
+      <img src="../assets/img/logo-norml.svg" alt="NORML France" class="h-8 md:h-10 drop-shadow-sm" />
+      <span class="font-bold font-main text-xl text-prohib-black tracking-wide uppercase hidden lg:block mt-1">
+        {{ $t('header.title') }}
       </span>
     </div>
     
-    <a 
-      href="https://www.helloasso.com/associations/norml-france/adhesions/adhesion-2024-a-norml-france" 
-      target="_blank" 
-      class="inline-flex items-center gap-2 px-6 py-3 bg-prohib-black text-white font-bold font-main uppercase tracking-widest rounded-full hover:bg-reg-green transition-colors shadow-lg text-sm cursor-interaction"
-    >
-      Soutenir notre action
-    </a>
+    <div class="flex items-center gap-4">
+      <!-- Language Switcher -->
+      <div class="flex items-center gap-2 text-sm font-bold font-main text-prohib-black/70 cursor-interaction">
+        <button 
+          @click="switchLocale('fr')" 
+          :class="{'text-reg-green border-b-2 border-reg-green': locale === 'fr', 'hover:text-prohib-black': locale !== 'fr'}"
+          class="transition-colors pb-1"
+        >FR</button>
+        <span class="opacity-50">|</span>
+        <button 
+          @click="switchLocale('en')" 
+          :class="{'text-reg-green border-b-2 border-reg-green': locale === 'en', 'hover:text-prohib-black': locale !== 'en'}"
+          class="transition-colors pb-1"
+        >EN</button>
+      </div>
+
+      <a 
+        href="https://www.helloasso.com/associations/norml-france/adhesions/adhesion-2024-a-norml-france" 
+        target="_blank" 
+        class="inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-prohib-black text-white font-bold font-main uppercase tracking-widest rounded-full hover:bg-reg-green transition-colors shadow-lg text-xs md:text-sm cursor-interaction"
+      >
+        {{ $t('header.cta') }}
+      </a>
+    </div>
   </header>
 </template>
