@@ -1,188 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-:root {
-  /* Harmonious Color Palette */
-  --bg-primary: #0a0b10;
-  --bg-secondary: #12131a;
-  --bg-tertiary: #1a1c26;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
-  
-  --accent-primary: #8b5cf6; /* Indigo / Purple */
-  --accent-primary-glow: rgba(139, 92, 246, 0.15);
-  --accent-secondary: #06b6d4; /* Turquoise / Cyan */
-  --accent-secondary-glow: rgba(6, 182, 212, 0.15);
-  
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-color-hover: rgba(255, 255, 255, 0.15);
-  
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-  
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.7);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.8);
-  
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
-  
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+@theme {
+  --color-poster-beige: #e4e9d5;
+  --color-prohib-black: #141414;
+  --color-reg-green: #2E8A42;
+  --color-highlight-green: #4caf50;
+  --color-light-green: #8bc34a;
+  --color-error-red: #d32f2f;
+  --color-gold: #d4af37;
+  --color-silver: #c0c0c0;
+  --color-bronze: #cd7f32;
+
+  --font-main: 'Platform', 'Space Grotesk', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'Platform';
+  src: url('/fonts/platform/Platform-Regular-Web.woff2') format('woff2'),
+       url('/fonts/platform/Platform-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: var(--font-sans);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+@font-face {
+  font-family: 'Platform';
+  src: url('/fonts/platform/Platform-Medium-Web.woff2') format('woff2'),
+       url('/fonts/platform/Platform-Medium-Web.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-primary);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--bg-tertiary);
-  border: 2px solid var(--bg-primary);
-  border-radius: var(--radius-full);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+@font-face {
+  font-family: 'Platform';
+  src: url('/fonts/platform/Platform-Bold-Web.woff2') format('woff2'),
+       url('/fonts/platform/Platform-Bold-Web.woff') format('woff');
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  font-style: normal;
+  font-display: swap;
 }
 
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+@font-face {
+  font-family: 'Platform';
+  src: url('/fonts/platform/Platform-BoldItalic-Web.woff2') format('woff2'),
+       url('/fonts/platform/Platform-BoldItalic-Web.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 
-h2 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+@layer base {
+  body {
+    @apply bg-poster-beige text-prohib-black font-body overflow-x-hidden;
+    background-image: radial-gradient(#d0d6c0 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-main font-bold tracking-tight;
+  }
 }
 
-h3 {
-  font-size: clamp(1.4rem, 3vw, 2rem);
-}
-
-p {
-  color: var(--text-secondary);
-}
-
-a {
-  color: var(--accent-primary);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-a:hover {
-  color: var(--accent-secondary);
-}
-
-/* Glassmorphism & Cards */
-.glass-panel {
-  background: rgba(18, 19, 26, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.glass-panel:hover {
-  border-color: var(--border-color-hover);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px var(--accent-primary-glow);
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  border: none;
-  font-size: 1rem;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent-primary), #6366f1);
-  color: white;
-  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
-  filter: brightness(1.1);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--text-muted);
-  transform: translateY(-2px);
-}
-
-/* Gradients & Background Elements */
-.gradient-text {
-  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary) 70%, var(--accent-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.glow-orb {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: var(--radius-full);
-  filter: blur(120px);
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.glow-orb-1 {
-  background: var(--accent-primary);
-  top: 10%;
-  left: 20%;
-}
-
-.glow-orb-2 {
-  background: var(--accent-secondary);
-  bottom: 20%;
-  right: 15%;
+/* Custom CSS utilities and GSAP helper classes */
+@layer utilities {
+  .text-gradient-norml {
+    @apply bg-gradient-to-r from-reg-green to-light-green bg-clip-text text-transparent;
+  }
+  
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-md border border-white/40 shadow-xl rounded-2xl;
+  }
 }
