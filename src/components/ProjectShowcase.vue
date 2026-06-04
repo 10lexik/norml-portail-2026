@@ -76,8 +76,7 @@ onMounted(() => {
           trigger: card,
           start: 'top 85%',
           end: 'center 50%',
-          scrub: 1,
-          markers: true
+          scrub: 1
         }
       })
 
