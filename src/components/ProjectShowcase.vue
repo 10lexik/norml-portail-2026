@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
+ScrollTrigger.config({ ignoreMobileResize: true })
 
 const sectionRef = ref(null)
 const titleRef = ref(null)
@@ -181,7 +182,7 @@ const handleMouseLeave = (e: MouseEvent, idx: number) => {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <component :is="p.route ? 'router-link' : 'a'" v-for="(p, i) in projects" :key="p.id"
-          :[p.route ? 'to' : 'href']="p.route || p.url" :target="p.url ? '_blank' : undefined"
+          :[p.route?'to':'href']="p.route || p.url" :target="p.url ? '_blank' : undefined"
           @mousemove="(e: MouseEvent) => handleMouseMove(e, i)" @mouseleave="(e: MouseEvent) => handleMouseLeave(e, i)"
           @touchstart="(e: TouchEvent) => handleMouseMove(e as any, i)"
           @touchend="(e: TouchEvent) => handleMouseLeave(e as any, i)"
